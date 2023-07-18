@@ -9,3 +9,4 @@ console.log(`Температура в градусах Цельсия: ${tempC}
 const name = 'Anna';
 const admin = name;
 console.log(`Admin is ${admin}.`)
+
