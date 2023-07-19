@@ -2,8 +2,8 @@
 // Задание 1
 // Создать переменные num1, num2 которые пользователь вводит с клавиатуры
 // Проверьте, что переменная num1 равна или меньше 1, а переменная num2 больше или равна 3.
-const num1 = prompt('Enter first number');
-const num2 = prompt('Enter second number');
+const num1 = Number(prompt('Enter first number'));
+const num2 = Number(prompt('Enter second number'));
 if (isNaN(num1) || isNaN(num2)) {
     console.log('Введено неверное значение');
 } else {
@@ -33,6 +33,18 @@ if (day >= 1 && day <= 10) {
 } else {
     console.log('Третья декада');
 }
+
+switch (true) {
+    case day >= 1 && day <= 10:
+        console.log('Первая декада');
+        break;
+    case day >= 11 && day <= 20:
+        console.log('Вторая декада');
+        break;
+    default:
+        console.log('Третья декада');
+        break;
+}
 // Задание 4
 // Необходимо от пользователя получить число.
 // Необходимо вывести разряды числа, а именно: количество сотен, десятков и единиц.
@@ -46,7 +58,7 @@ if (day >= 1 && day <= 10) {
 // Пользователь ввел число 9537. Программа должна вывести:
 // "В числе 9537 количество сотен: 5, десятков: 3, единиц: 7"
 // Уточнение: пользователь всегда вводит корректное положительное целое число.
-let number = prompt('Введите число');
+let number = Number(prompt('Введите число'));
 let arrNumb = [number];
 for (let i = 3; i > 0; i--) {
     arrNumb[i] = number % 10;
