@@ -41,7 +41,7 @@ function findMax(array) {
 }
 
 const count = 3;
-let arrNumbers = [];
+const arrNumbers = [];
 for (let i = 0; i < count; i++) {
     arrNumbers[i] = askUser();
 }
