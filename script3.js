@@ -1,14 +1,15 @@
 // HomeWork-3
 // Задание 1
 // Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
-let getCube = number => Math.pow(number, 3);
+function getCube(number) {
+    return Math.pow(number, 3);
+}
 console.log(getCube(2));
 console.log(getCube(3));
 // Задание 2
 // Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
 // Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
-
-let askUser = () => {
+function askUser() {
     let number = Number(prompt('Введите число'));
     while (isNaN(number)) {
         console.log('Число введено неверно');
@@ -17,7 +18,7 @@ let askUser = () => {
     return number;
 }
 
-let getSalary = number => {
+function getSalary(number) {
     let tax = number * 0.13;
     console.log(`Размер заработной платы за вычетом налогов равен ${number - tax}`);
     return tax;
@@ -28,13 +29,7 @@ getSalary(askUser());
 
 // Задание 3
 // Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
-let count = 3;
-let arrNumbers = [];
-for (let i = 0; i < count; i++) {
-    arrNumbers[i] = askUser();
-}
-
-let findMax = array => {
+function findMax(array) {
     let max = array[0];
     for (let index = 1; index < array.length; index++) {
         if (max < array[index]) {
@@ -44,6 +39,13 @@ let findMax = array => {
     console.log(`Максимальное число равно ${max}.`);
     return max;
 }
+
+const count = 3;
+let arrNumbers = [];
+for (let i = 0; i < count; i++) {
+    arrNumbers[i] = askUser();
+}
+
 findMax(arrNumbers);
 
 
