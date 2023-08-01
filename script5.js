@@ -16,6 +16,15 @@ for (const key in numbers) {
     }
 }
 
+// Другой вариант:
+Object.values(numbers).forEach(element => {
+    if (element >= 3) {
+        console.log(element);
+    }
+});
+
+
+
 // Задание 2
 // Необходимо из объекта, который лежит в константе post вывести значения, к которым приписан комментарий, в консоль.
 
@@ -71,12 +80,14 @@ for (const product of goods) {
     product.price = product.price * 0.85;
 }
 console.log(goods);
+// можно через forEach или map
+
 
 // // Задание 4
-// // 1. Необходимо вывести в консоль массив продуктов в котором есть 
-// хоть одна фотография используя метод filter. 
+// // 1. Необходимо вывести в консоль массив продуктов в котором есть
+// хоть одна фотография используя метод filter.
 // Исходные данные - массив products.
-// // 2. Необходимо отсортировать массив products используя метод sort 
+// // 2. Необходимо отсортировать массив products используя метод sort
 // по цене, начиная с самой маленькой, заканчивая самой большой ценой,
 //  после чего вывести отсортированный массив в консоль.
 
@@ -110,13 +121,15 @@ const products = [
 
 // 1.
 const havePhoto = products.filter(product => product.hasOwnProperty('photos') && product.photos.length != 0);
+// или
+const havePhotoOther = products.filter(product => product.photos?.length != 0);
 console.log(havePhoto);
 // 2.
-products.sort((product1, product2) => {
-    if (product1.price > product2.price) return 1;
-    if (product1.price < product2.price) return -1;
-    return 0;
-});
+products.sort((product1, product2) => product1.price - product2.price);
+//     if (product1.price > product2.price) return 1;
+//     if (product1.price < product2.price) return -1;
+//     return 0;
+// });
 console.log(products);
 
 // **Задание 5**
