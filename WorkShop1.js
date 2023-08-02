@@ -13,10 +13,7 @@ function mergeArrays(array1, array2) {
 }
 console.log(mergeArrays([1, 2, 3], [4, 5, 6]));
 
-function showName() { console.log(this); }
-const user1 = { name: 'Ann' };
-const user2 = { name: 'Nna' };
-showName.call(user2);
+
 
 // 2. Создайте функцию removeDuplicates, которая принимает
 // любое количество аргументов и возвращает новый

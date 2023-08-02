@@ -490,7 +490,7 @@ const h2El = document.createElement('h2') - создает тег, пока не
 firstDiv.appendChild(h2El); - добавляет созданный тег в див ребенком.
     если найдем элемент на странице и добавим его ребенком в другой тег, он перетащится
     на основе найденного тега делаем клон и копируем:
-    const h2Clone = h2El.clone(true); - true - глубокое копирование
+    const h2Clone = h2El.cloneNode(true); - true - глубокое копирование
 firstDiv.remove() - удалить 
 
 button.insertAdjacentHTML('afterbegin', '<u>ПРивет</u>'); - вставить элемент перед тегом. (строку превращает в теги и вставляет)

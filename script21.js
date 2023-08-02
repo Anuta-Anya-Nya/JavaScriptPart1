@@ -8,22 +8,23 @@ console.log(Math.min(...arr));
 //  increment и decrement. Метод increment должен увеличивать значение счетчика на 1, 
 //  а метод decrement должен уменьшать значение счетчика на 1. 
 //  Значение счетчика должно быть доступно только через методы объекта, а не напрямую.
-function createCounter() {
+
+function createCounter(){
     let count = 0;
-    function increment(){
-        return count++;
-    }
-    function decrement(){
-        return count--;
-    }
     return {
-        increment,
-        decrement
+        increment () {            
+            return count++;
+        },
+        decrement (){            
+            return count--;
+        }
     }
 }
 const counter = createCounter();
 counter.increment();
 counter.decrement();
+
+
 
 
 
