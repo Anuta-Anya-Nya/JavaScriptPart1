@@ -13,16 +13,17 @@ function createCounter(){
     let count = 0;
     return {
         increment () {            
-            return count++;
+            return ++count;
         },
         decrement (){            
-            return count--;
+            return --count;
         }
     }
 }
 const counter = createCounter();
-counter.increment();
-counter.decrement();
+console.log(counter.increment());
+console.log(counter.decrement());
+
 
 
 
