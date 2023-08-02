@@ -9,13 +9,13 @@ console.log(Math.min(...arr));
 //  а метод decrement должен уменьшать значение счетчика на 1. 
 //  Значение счетчика должно быть доступно только через методы объекта, а не напрямую.
 
-function createCounter(){
+function createCounter() {
     let count = 0;
     return {
-        increment () {            
+        increment() {
             return ++count;
         },
-        decrement (){            
+        decrement() {
             return --count;
         }
     }
@@ -24,7 +24,17 @@ const counter = createCounter();
 console.log(counter.increment());
 console.log(counter.decrement());
 
-
+// 3) Напишем функцию, которая будет находить факториал числа с использованием рекурсии:
+// примеры вызова функции
+function factorial(number){
+    if(number <= 1) {
+        return 1;
+    } else {
+        return factorial(number - 1) * number;
+    }
+}
+console.log(factorial(5)); // выводит 120 (5 * 4 * 3 * 2 * 1)
+console.log(factorial(0)); // выводит 1 (по определению факториала)
 
 
 
