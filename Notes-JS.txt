@@ -435,9 +435,10 @@ class Person {
         this.name = name;
         this.gender = gender;
     }
-    sayName(){
+    sayName(){ //если пишем так то функция попадает в прототип 
         console.log(`Мое имя: ${this.name}`);
     }
+    foo = function (){.........} //так функция попадает в экщемпляр 
 }
 class Employee extends Person{
     constructor(name, gender, position){
@@ -533,6 +534,8 @@ firstDiv.classList - просмотреть классы и удобно с ни
 firstDiv.id = 'ddddd' - найти id  и заменить
 
 let el = document.querySelector('[aria-labelledby="dropdownMenuButton"]); поиск по атрибуту 
+firstDiv.src = 'ddddd';
+firstDiv.disabled = true;
 firstDiv.getAttribute('nameattrib') - получить значение атрибута 
 firstDiv.setAttribute('nameattrib', 'new') - заментить значение аттрибута 
 firstDiv.setAttribute('newAt', 'new') создать новый атрибут 
@@ -572,12 +575,6 @@ btnEl.removeEventListener('click', () => {alert('Товар добавлен в 
 event.target.tagName !== "BUTTON" - тег на который нажали
 event.target.textContent - текст нажатого тега
 
-document.addEventListener(
-    'DOMContentLoaded',
-    () => console.log("все теги прогрузились")
-  ); - повесили обработку на документ body когда все  теги будут созданы браузером
-
-window.addEventListener('load', () => console.log("страница загрузилась")); - когда все ресурсы страницы будут загружены.
 
 События мыши:
     click – происходит, когда кликнули на элемент левой кнопкой мыши (на устройствах с сенсорными экранами оно происходит при касании).
@@ -601,6 +598,10 @@ CSS events:
     change - изменение и сменили фокус, вешают на input
     input - каждое изменение ввода в input, select 
     scroll - промотка, вешается на window сколько промотали с верха страницы. функция должна быть максимально простая 
+
+document.addEventListener("DOMContentLoaded",  console.log("все теги прогрузились")
+      );
+window.addEventListener("load", console.log("страница загрузилась"));
 -------------------------------------------------------------------------------------
 ВСПЛЫТИЕ СОБЫТИЙ 
 собитие идет имеено от того на котором кликнули и распространяется дальше на родителей
@@ -676,3 +677,21 @@ ES6:
 стрелочные функции - работают с контекстом 
 дефолтные арументы - const foo(a,b=0){}
 ------------------------------------------------------------------------------------
+AJAX - позволяет
+технологии: HTTP - протокол передачи гипертекста, для передачи данных 
+должны быть 2 цчастника передачи - клиент(браузер, сервер и тд) и сервер
+всегда есть кто запрашивает и отвечает
+запросы на получение данных, на изменение данных, всегда должен быть ответ
+
+запрос делится на 3 части:
+стартовая строка 
+заголовки
+тело 
+
+ответ bp 'nb[ ;t xfcntq ]
+
+
+
+
+
+
